@@ -24,12 +24,12 @@ DELIMITER //
 CREATE FUNCTION f_get_carrera(carrera INT)
 RETURNS INT
 BEGIN
-    DECLARE carrera_id INT;
+    DECLARE id_carrera INT;
 
     -- Obtener el ID de la carrera desde la tabla Carrera
-    SET carrera_id = (SELECT carrera_id FROM Carrera WHERE carrera_id = carrera);
+    SET id_carrera = (SELECT carrera_id FROM Carrera WHERE carrera_id = carrera);
 
-    RETURN carrera_id;
+    RETURN id_carrera;
 END //
 
 DELIMITER ;
